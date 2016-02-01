@@ -2,11 +2,11 @@
 <html>
 <head>
  <link rel="stylesheet" href="mainPage.css">
- <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
 <meta charset="utf-8">
 <title>Hang Dong</title>
  <script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
- <script type="text/javascript" src="lib/jqueryui/jquery-ui.js"></script>
+<!-- <script type="text/javascript" src="lib/jqueryui/jquery-ui.js"></script>-->
+<!-- <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>-->
  <script src="lib/HangDongJavaScript.js"></script>
 
 
@@ -15,12 +15,6 @@
 <div id="head"></div>
 <div id="container">
     <div >
-<!--            <ul>-->
-<!--        <li id="orange"><img  id="orange1" src= "image/icon/home.png " onmouseOver="this.src='image/home.png';" onMouseOut="this.src='image/icon/home.png'" width= "190px"   alt="Home">	</li>
-        <li id="blue">  <img id="blue1"  src= "image/icon/project.png "  onmouseOver="this.src='image/project.png';" onMouseOut="this.src='image/icon/project.png'" width= "190px"   alt="Project">	</li>
-        <li id="green"> <img  id="green1" src= "image/icon/aboutMe.png " onmouseOver="this.src='image/aboutMe.png';" onMouseOut="this.src='image/icon/aboutMe.png'"  width= "190px"  alt="About me"  ></li>
-        <li id="yellow"> <img id="yellow1"  src= "image/icon/contact.png " onmouseOver="this.src='image/contact.png';" onMouseOut="this.src='image/icon/contact.png'"  width= "190px"    alt="Contact"></li>-->
-
         <div id = "orange" class = "menu"><p id="menuText">Home </p></div>
         <div id = "blue"  class = "menu"> <p id="menuText">Project </p></div>
         <div id = "green"  class = "menu"><p id="menuText">Profile </p></div>
@@ -32,7 +26,7 @@
 
     
     <!--first page content-->
-    <div id="name" ><img src="image/Hang Dong.png" width="450px" alt="Hang Dong"></div>
+    <div id="name" ><img src="image/Hang Dong.png" width="450" alt="Hang Dong"></div>
     <div id="webdeveloper">
         <p id="webdeveloperText">web <br/> developer</p>
     </div>
@@ -47,28 +41,40 @@
     <div id="text"></div>
 
     <div id="project1" class="project">
+        <img  src="image/project/CUEdemo.png" class="projectPicture" >
         <span class="projectName">Cue Stacks</span>
-        <br><img  src="image/project/CUEdemo.png" class="projectPicture" >
         <ul class="projectList">
             <li>Design the frame of the project.</li>
             <li> Write code for the HTML5 file, CSS file and Javascript file.</li>
             <li> Make interaction between widgets.  </li>
         </ul> 
+        <span class="learnMore">learn more -><span>
     </div>
 
     <div id="project2" class="project">
+        <img  src="image/project/3Dmodel1.JPG" class="projectPicture" >
         <span class="projectName">3D modeling</span>
-        <br><img  src="image/project/3Dmodel1.JPG" class="projectPicture" >
         <ul class="projectList">
             <li> Design and Improve the algorithm to generate a 3D model.</li>
             <li> Integrate this module to the whole application.</li>
             <li> Adjust the 3D model points for 3D printing.   </li>
         </ul>
+        <span class="learnMore">learn more -></span>
+                
+         <iframe id = "3Dproject" width="750" height="470" align="middle" style="position:relative; top: 60px; left: 170px; display:none; z-index:3"
+                 src="http://www.youtube.com/embed/60SPK4L9WVM?" allowfullscreen frameborder="0" >
+        </iframe>
+     
     </div>
-
+    
+<!--    <div id="3DprojectDiv">-->
+       
+<!--    </div>-->
+    
     <div id="project3" class="project">
-            <span class="projectName">The LPR System</span>
-        <br><img  src="image/project/LPR1.png" class="projectPicture" >
+        <img  src="image/project/LPR1.png" class="projectPicture" >
+         <span class="learnMore">learn more -></span>
+        <span class="projectName">The LPR System</span>
         <ul class="projectList">
             <li>Define and develop the LPR (License Plate Recognition) system and all modules.</li>
             <li>Write all the code in matlab and test and debug it.</li>
@@ -78,14 +84,15 @@
     </div>
 
     <div id="project4" class="project">
+        <img  src="image/project/MarioGame.jpg" class="projectPicture" >
         <span class="projectName">Other applications</span>
-        <br><img  src="image/project/MarioGame.jpg" class="projectPicture" >
         <ul class="projectList">
         <li>Mario Games.</li>
         <li>Five Chess Project.</li>
         <li>Scoring Assistance.</li>
         <li>RFID collision emulator.</li>          
         </ul>
+        <span class="learnMore">learn more -><span>
     </div>
 
 
@@ -182,6 +189,7 @@
                     <span class="skillTitle">Programming language:  </span><br> 
                                <div class="changeBackground">Java:     <span class="star"> &#9733 &#9733 &#9733 &#9733 &#9733 </span> </div>    
                                <div class="changeBackground"> j-Query <span class="star"> &#9733 &#9733 &#9733 &#9733 &#9734 </span></div>   
+                               <div class="changeBackground"> SWIFT			<span class="star"> &#9733 &#9733 &#9733 &#9734 &#9734 </span></div> 
                                <div class="changeBackground"> SQL			<span class="star"> &#9733 &#9733 &#9734 &#9734 &#9734 </span></div> 
                     <span class="skillTitle">Developing platform:</span><br> 
                                <div class="changeBackground">Eclipse<span class="star"> &#9733 &#9733 &#9733 &#9733 &#9733 </span></div>
@@ -189,13 +197,14 @@
                                <div class="changeBackground"> Dreamweaver<span class="star"> &#9733 &#9733 &#9733 &#9733 &#9733 </span></div> 
                                <div class="changeBackground">  Premier <span class="star"> &#9733 &#9733 &#9733 &#9733 &#9734 </span></div> 
                     <span class="skillTitle">Other skill:  </span>  
-                               <div class="changeBackground"> Computer Visual Effect<span class="star"> &#9733 &#9733 &#9733 &#9733 &#9733 </span></div> 
+                               <div class="changeBackground"> Visual Effect<span class="star"> &#9733 &#9733 &#9733 &#9733 &#9733 </span></div> 
                                <div class="changeBackground"> 3D modeling<span class="star"> &#9733 &#9733 &#9733 &#9733 &#9733 </span></div> 
             </div>
             <div id="rightSkill">
                                <br><div class="changeBackground"> JavaScript <span class="star"> &#9733 &#9733 &#9733 &#9733 &#9733 </span></div> 
                                <div class="changeBackground"> HTML5 & CSS  <span class="star"> &#9733 &#9733 &#9733 &#9733 &#9733 </span></div> 
                                <div class="changeBackground"> C++  <span class="star"> &#9733 &#9733 &#9733 &#9733 &#9734 </span></div>   
+                               <div class="changeBackground"> Java Web <span class="star"> &#9733 &#9733 &#9733 &#9734 &#9734 </span></div>   
                                 <br><div class="changeBackground"> Matlab<span class="star"> &#9733 &#9733 &#9733 &#9733 &#9733 </span></div>   
                                <div class="changeBackground"> Photoshop<span class="star"> &#9733 &#9733 &#9733 &#9733 &#9734 </span></div> 
                                <div class="changeBackground"> Processing<span class="star"> &#9733 &#9733 &#9733 &#9733 &#9734 </span></div> 
@@ -210,13 +219,24 @@
 
         <h2>Education</h2>
         <div>
-            <div class="leftRow">
+            
+            <div class="leftRow" >
                 <p><b>Northeastern University</b></p>
                 <p>Boston, MA</p>
                 <p>09/2014-03/2016</p>
             </div>
-            <div class="rightRow">
-                                         <div class="textCenter"> <br><br><br>   Master degree of Informatics<br><br><br><br></div>
+            <div class="rightRow" >
+                                         <div class="textCenter"  > Master degree of Informatics<br>
+                                            <ol style ="text-align:left">
+                                            <li> Gain a strategic framework for aligning competitive strategies, core competencies, and information systems</li>
+                                            <li>Examine concepts, architectures, protocols, standards, and security models for digital networks </li>
+                                            <li>Acquire tools and techniques for effectively managing small, medium, and large programming projects  </li>
+                                            <li>Learn how to adopt a multi-disciplinary approach to research and analysis </li>
+                                            <li>Understand what is required to research, identify, design, implement, secure, and manage technology </li>
+                                            <li>Gain a strategic framework for aligning competitive strategies, core competencies, and information systems</li>
+                                            <li>Explore cutting-edge software principles and programming techniques</li>
+                                            </ol>     
+                                         </div>
 
             </div>  
         </div>
@@ -227,15 +247,22 @@
                 <p>Beijing, China</p>
                 <p>09/2010-05/2014</p>
             </div>
+            
             <div class="rightRow">
-                  <div class="textCenter"> <br><br><br>  Bachelor of Electric Engineering</div>
+                  <div class="textCenter" >   <br> <br>Bachelor of Electric Engineering
+                      
+                       <ol style ="text-align:left">
+                            <li>  I have strong programming background by taking basic programming courses as C language foundation, C++, Java Web Development.</li>
+                            <li> By taking advanced courses as Image processing, single chip design, web development and VHDL(very high speed integrated circuit hardware description language), I formed very solid software design logic and comprehensive thinking.</li>
+                       </ol>
+                   </div>
             </div>  
         </div>
 
     </div>
 
     <!--fourth page content-->
-        <div id="contactPortral"><img  src="image/icon/home.png" style="width:180px;height:180px"></div>
+        <div id="contactPortral"><img  src="image/selfImage.jpg" style="width:200px;height:200px"></div>
         <div id='contactText'>
             <br>If you need a java coder and web developer, or if you would just like to learn more about Hang's skills, please contact him
 
@@ -258,9 +285,9 @@
      </div>
 
     <div id="foot">
-    <img id="linkedin" src="image/icon/linkedin.png" onmouseOver="this.src='image/icon/linkedin1.png';" onMouseOut="this.src='image/icon/linkedin.png'" style="width:40px;height:40px;">
-    <img id="facebook" src="image/icon/facebook.png" onmouseOver="this.src='image/icon/facebook1.png';" onMouseOut="this.src='image/icon/facebook.png'" style="width:40px;height:40px;">
-    <a href="mailto:dong.h@husky.neu.edu"><img id="email" src="image/icon/email.png" onmouseOver="this.src='image/icon/email1.png';" onMouseOut="this.src='image/icon/email.png'" style="width:40px;height:40px;"> </a>
+    <a href="https://www.linkedin.com/in/hang-dong-570b48ab"><img id="linkedin" src="image/icon/linkedin.png" alt="Linkedin Image" style="width:40px;height:40px;"></a>
+    <a href="https://www.facebook.com/profile.php?id=100007948726013"><img id="facebook" src="image/icon/facebook.png" style="width:40px;height:40px;"></a>
+    <a href="mailto:dong.h@husky.neu.edu"><img id="email" src="image/icon/email.png" style="width:40px;height:40px;"> </a>
     </div>
 </div>
 </body>

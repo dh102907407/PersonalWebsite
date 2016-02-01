@@ -1,6 +1,6 @@
 var pagenumber=0;
 var ifProjectExpand=false;
-
+var player; function onYouTubeIframeAPIReady(){player=new YT.Player('3Dproject')}
 
 $(document).ready(function(){
 	arrowFunction();	 
@@ -83,6 +83,7 @@ function menuDirection(){
         mainpageGather();
         resumeScrollUp();
         contactSeperate();
+       
         pagenumber=0;
         menuExpand();
     });
@@ -90,6 +91,7 @@ function menuDirection(){
         projectsSeperate();
         mainpageSeperate();
         resumeScrollDown();
+      
         contactSeperate();
         pagenumber=2;
         menuExpand();
@@ -99,6 +101,7 @@ function menuDirection(){
         projectsSeperate();
         mainpageSeperate();
         resumeScrollUp();
+       
         pagenumber=3;
         menuExpand();
     });
@@ -142,6 +145,7 @@ function projectExpand(){
         $("#project2").animate({ opacity:'0'});
         $("#project3").animate({ opacity:'0'});
         $("#project4").animate({ opacity:'0'});
+        $(".learnMore").css({display:'none'});
 	$(".projectPicture").css({display:'none'});
 	$(".projectList").css({display:'none'});
         $(".projectName").css({display:'none'});
@@ -160,7 +164,13 @@ function projectExpand(){
         $("#project1").animate({ opacity:'0'});
         $("#project3").animate({ opacity:'0'});
         $("#project4").animate({ opacity:'0'});
-		
+        $("#3Dproject").css({display:'inline'});
+	$("#3Dproject")[0].src += "&autoplay=1";
+        $(".projectPicture").css({display:'none'});
+	$(".projectList").css({display:'none'});
+        $(".learnMore").css({display:'none'});
+        $(".projectName").css({display:'none'});
+
         $("#return").animate({ opacity:'1'});
         setIfProjectExpand(); 
          }else{
@@ -177,6 +187,7 @@ function projectExpand(){
         setIfProjectExpand(); 
         $(".projectPicture").css({display:'none'});
 	$(".projectList").css({display:'none'});
+        $(".learnMore").css({display:'none'});
         $(".projectName").css({display:'none'});
         $('#project3').addClass('lpr-bg').removeClass('bg') ;
         
@@ -186,7 +197,6 @@ function projectExpand(){
     });
      $('#project4').on('click',function(e) {
            if(ifProjectExpand===false){
-               alert(this.id);
          $("#project4").animate({ left:'-20px',top:'0px',height:'640px',width:'1150px'});
          $("#project2").animate({ opacity:'0'});
          $("#project3").animate({ opacity:'0'});
@@ -194,6 +204,7 @@ function projectExpand(){
          $("#return").animate({ opacity:'1'});
          $(".projectPicture").css({display:'none'});
 	 $(".projectList").css({display:'none'});
+         $(".learnMore").css({display:'none'});
          $(".projectName").css({display:'none'});
          $('#project4').addClass('allKindsOfProject-bg').removeClass('bg') 
          setIfProjectExpand();
@@ -224,6 +235,8 @@ function projectReset(){
 		 $(".projectPicture").css({display:'inline'});
 		 $("#projectList").css({display:'inline'});
                  $(".projectName").css({display:'inline'});
+                 $(".learnMore").css({display:'inline'});
+                 $("#3Dproject").css({display:'none'});
 		 $(".projectDemo").animate({opacity:'0'});
          $("#return").animate({ opacity:'0'});
          setIfProjectExpand();
@@ -280,4 +293,14 @@ function menuExpand(){
         $("#yellow1").animate({ width:'220px'});
     }
     
+}
+
+
+function toggleVideo(state) {
+    // if state == 'hide', hide. Else: show video
+    var div = document.getElementById("3Dproject");
+    var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+    div.style.display = state == 'hide' ? 'none' : '';
+    func = state == 'hide' ? 'pauseVideo' : 'playVideo';
+    iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
 }
